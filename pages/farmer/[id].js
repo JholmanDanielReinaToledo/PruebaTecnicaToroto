@@ -92,7 +92,7 @@ export default function FarmerDetail({ farmer }) {
           }}>
           General information
         </div>
-        <div className='row' style={{ height: "54vh", width: "90vw" }}>
+        <div className='row' style={{ height: "45vh", width: "90vw" }}>
           <div className='column side'>
             <div className='card'>
               <Image
