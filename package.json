@@ -9,10 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@svgr/webpack": "^6.5.1",
+    "@turf/turf": "^6.5.0",
+    "lodash": "^4.17.21",
     "mapbox-gl": "^2.10.0",
     "mongoose": "^6.7.1",
     "next": "13.0.1",
     "react": "18.2.0",
+    "react-alice-carousel": "^2.7.0",
     "react-dom": "18.2.0"
   }
 }

@@ -1,3 +1,4 @@
+@import "react-alice-carousel/lib/alice-carousel.css";
 html,
 body {
   padding: 0 !important;
@@ -23,4 +24,68 @@ a {
     color: white;
     background: black;
   }
+}
+
+.imgModalMini {
+  border-radius: 6px;
+  max-height: 100px;
+  margin: 5%;
+}
+
+.horizontalDiv {
+  display: flex;
+  font-size: 20px;
+}
+
+.namesModalMini {
+  margin: 5%;
+}
+
+.mainDivModal {
+  width: 400px;
+}
+
+.buttonModal {
+  width: 80%;
+  background-color: #0055B8;
+  color: white;
+  border: none;
+  height: 30px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  margin: 1%;
+}
+
+.column.side {
+  width: 25%;
+}
+
+.column.middle {
+  width: 25%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.nav-link {
+  padding: 15px;
+  font-weight: bold;
+  color: #0055B8;
+  font-size: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 4%;
+  border-radius: 6px;
+  height: 40vh;
 }
