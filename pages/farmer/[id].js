@@ -80,41 +80,28 @@ export default function FarmerDetail({ farmer }) {
       <div className='container'>
         <p className='title2'>General information</p>
         <div style={{ height: "45vh", width: "90vw" }}>
-          <div className='column side'>
+          <div className='column left'>
             <div className='card'>
               <img
                 src={farmer?.image}
                 alt={farmer?.name}
-                className="farmerImage"
+                className='farmerImage'
               />
               <div className='horizontalDiv'>
-                <img
-                  src='/images/name_icon.svg'
-                  alt='nameIcon'
-                />
-                <div>
-                  <b>Name:</b> {farmer?.name}
-                </div>
+                <img src='/images/name_icon.svg' alt='nameIcon' />
+                <b>Name:</b> {farmer?.name}
               </div>
               <div className='horizontalDiv'>
-                <img
-                  src='/images/descripcion_icon.svg'
-                  alt='descripcionIcon'
-                />
-                <div>
-                  <b>ID:</b> #{farmer?.identifier}
-                </div>
+                <img src='/images/descripcion_icon.svg' alt='descripcionIcon' />
+                <b>ID:</b> #{farmer?.identifier}
               </div>
             </div>
           </div>
 
           <div className='column middle'>
-            <div className='card'>
+            <div className='card2'>
               <div className='horizontalDiv'>
-                <img
-                  src='/images/location_icon.svg'
-                  alt='locationIcon'
-                />
+                <img src='/images/location_icon.svg' alt='locationIcon' />
                 <div>
                   <b>State:</b> {farmer?.state} <b>Sown area:</b>{" "}
                   {farmer?.sownArea} ha
@@ -128,24 +115,14 @@ export default function FarmerDetail({ farmer }) {
               </div>
 
               <div className='horizontalDiv'>
-                <Image
-                  src='/images/water_icon.svg'
-                  width='30'
-                  height='30'
-                  alt=''
-                />
+                <img src='/images/water_icon.svg' alt='waterIcon' />
                 <div>
                   <b>Hidryc regime:</b> {farmer?.hydricRegime}
                 </div>
               </div>
 
               <div className='horizontalDiv'>
-                <Image
-                  src='/images/agriculture_icon.svg'
-                  width='30'
-                  height='30'
-                  alt=''
-                />
+                <img src='/images/agriculture_icon.svg' alt='agricultureIcon' />
                 <div>
                   <b>Agriculture technology:</b> {farmer?.agricultureTechnology}
                 </div>
@@ -153,10 +130,8 @@ export default function FarmerDetail({ farmer }) {
             </div>
           </div>
 
-          <div className='column side'>
-            <div
-              style={{ height: "40vh", width: "25vw", borderRadius: "6px" }}
-              id='map'></div>
+          <div className='column right'>
+            <div className='mapDetail' id='map' />
           </div>
         </div>
         <DashBoard />
