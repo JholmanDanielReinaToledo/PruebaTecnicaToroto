@@ -1,17 +1,11 @@
 import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 import mapboxgl from "mapbox-gl";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Header from "../../src/layouts/header";
 import Footer from "../../src/layouts/footer";
-import { useRouter } from "next/router";
 import { getFarmer } from "../../src/commons";
-import Image from "next/image";
 import { calculateBounds } from "../../src/utils";
-import { map } from "lodash";
-import Card from "../../src/components/card";
-import AliceCarousel from "react-alice-carousel";
-import { useWorks } from "../../src/context/worksContext";
 import DashBoard from "../../src/components/dashBoard";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;

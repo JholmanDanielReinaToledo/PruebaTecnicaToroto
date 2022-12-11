@@ -7,7 +7,6 @@ import { map } from "lodash";
 import Header from "../src/layouts/header";
 import Footer from "../src/layouts/footer";
 import { farmerToModal } from "../src/utils";
-import { useWorks } from "../src/context/worksContext";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 

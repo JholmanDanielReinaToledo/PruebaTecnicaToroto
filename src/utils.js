@@ -39,12 +39,12 @@ export const farmerToModal = (farmer) => {
 export const calculateBounds = (coordinates) => {
   return [
     [
-      coordinates[0] - 0.1,
-      coordinates[1] - 0.1,
+      coordinates[0] - 0.08,
+      coordinates[1] - 0.08,
     ], // Southwest coordinates
     [
-      coordinates[0] + 0.1,
-      coordinates[1] + 0.1,
+      coordinates[0] + 0.08,
+      coordinates[1] + 0.08,
     ], // Northeast coordinates
   ]
 }

@@ -1,5 +1,3 @@
-import * as turf from "@turf/turf";
-
 const API_BASE_URL = 'http://localhost:3000/api';
 
 export const getFarmers = async () => {
