@@ -89,3 +89,30 @@ header {
   border-radius: 6px;
   height: 40vh;
 }
+
+.container {
+  background-color: #F5F5F5;
+  padding: 0px 60px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2em;
+  color: #0055B8;
+}
+
+.title2 {
+  font-weight: bold;
+  font-size: 2em;
+  color: #0055B8;
+  padding-top: 40px; 
+  margin: 0;
+}
+
+.headerdiv {
+  justify-content: space-between;
+}
+
+.carrousel {
+  padding-bottom: 20px;
+}

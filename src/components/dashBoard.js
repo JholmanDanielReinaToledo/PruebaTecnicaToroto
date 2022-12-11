@@ -14,24 +14,10 @@ function DashBoard() {
 
   return (
     <>
-      <div
-        style={{
-          paddingLeft: "30px",
-          paddingBottom: "30px",
-          fontWeight: "bold",
-          fontSize: "2em",
-          color: "#0055B8",
-        }}>
+      <p className="title">
         Conservation works
-      </div>
-      <div
-        style={{
-          justifyContent: "flex-start",
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-        }}></div>
-      <div style={{ paddingBottom: "20px" }}>
+      </p>
+      <div className="carrousel">
         <AliceCarousel
           mouseTracking
           items={map(works, (item) => (

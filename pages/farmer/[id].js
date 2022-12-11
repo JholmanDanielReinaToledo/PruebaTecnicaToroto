@@ -33,7 +33,7 @@ export default function FarmerDetail({ farmer }) {
 
     mapBox.on("load", () => {
       mapBox.addSource(farmer?._id, farmer.geoJson);
-      const layer = mapBox.getLayer(farmer?._id)
+      const layer = mapBox.getLayer(farmer?._id);
       if (!layer) {
         mapBox.addLayer({
           id: farmer?._id,
@@ -70,29 +70,16 @@ export default function FarmerDetail({ farmer }) {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Toroto</title>
         <meta name='description' content='' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />
-      <div
-        style={{
-          backgroundColor: "#F5F5F5",
-          paddingLeft: "60px",
-          paddingRight: "60px",
-        }}>
-        <div
-          style={{
-            padding: "30px",
-            fontWeight: "bold",
-            fontSize: "2em",
-            color: "#0055B8",
-          }}>
-          General information
-        </div>
-        <div className='row' style={{ height: "45vh", width: "90vw" }}>
+      <div className='container'>
+        <p className='title2'>General information</p>
+        <div style={{ height: "45vh", width: "90vw" }}>
           <div className='column side'>
             <div className='card'>
               <Image
