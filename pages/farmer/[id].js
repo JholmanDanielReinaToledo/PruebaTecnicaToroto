@@ -82,30 +82,24 @@ export default function FarmerDetail({ farmer }) {
         <div style={{ height: "45vh", width: "90vw" }}>
           <div className='column side'>
             <div className='card'>
-              <Image
+              <img
                 src={farmer?.image}
-                width='370'
-                height='200'
-                alt=''
-                style={{ borderRadius: "6px", marginBottom: "20px" }}
+                alt={farmer?.name}
+                className="farmerImage"
               />
               <div className='horizontalDiv'>
-                <Image
+                <img
                   src='/images/name_icon.svg'
-                  width='30'
-                  height='30'
-                  alt=''
+                  alt='nameIcon'
                 />
                 <div>
                   <b>Name:</b> {farmer?.name}
                 </div>
               </div>
               <div className='horizontalDiv'>
-                <Image
+                <img
                   src='/images/descripcion_icon.svg'
-                  width='30'
-                  height='30'
-                  alt=''
+                  alt='descripcionIcon'
                 />
                 <div>
                   <b>ID:</b> #{farmer?.identifier}
@@ -117,11 +111,9 @@ export default function FarmerDetail({ farmer }) {
           <div className='column middle'>
             <div className='card'>
               <div className='horizontalDiv'>
-                <Image
+                <img
                   src='/images/location_icon.svg'
-                  width='30'
-                  height='30'
-                  alt=''
+                  alt='locationIcon'
                 />
                 <div>
                   <b>State:</b> {farmer?.state} <b>Sown area:</b>{" "}

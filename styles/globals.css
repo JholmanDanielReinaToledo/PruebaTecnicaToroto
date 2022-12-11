@@ -116,3 +116,9 @@ header {
 .carrousel {
   padding-bottom: 20px;
 }
+
+.farmerImage {
+  border-radius: 6px;
+  margin-bottom: 20px;
+  max-width: 100%;
+}
