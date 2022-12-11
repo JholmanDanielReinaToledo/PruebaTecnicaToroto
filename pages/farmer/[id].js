@@ -23,7 +23,7 @@ export default function FarmerDetail({ farmer }) {
       style: "mapbox://styles/mapbox/satellite-v9",
       projection: "globe",
       center: farmer?.centroid?.geometry?.coordinates,
-      maxZoom: 11,
+      maxZoom: 14,
       maxBounds: calculateBounds(farmer?.centroid?.geometry?.coordinates),
     });
 
@@ -49,12 +49,12 @@ export default function FarmerDetail({ farmer }) {
 
       const start = {
         center: farmer?.centroid?.geometry?.coordinates,
-        zoom: 14,
+        zoom: 2,
       };
 
       const end = {
         center: farmer?.centroid?.geometry?.coordinates,
-        zoom: 9.5,
+        zoom: 11,
       };
 
       let isAtStart = true;
