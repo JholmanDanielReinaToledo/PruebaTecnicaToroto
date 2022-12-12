@@ -10,6 +10,7 @@ import DashBoard from "../../src/components/dashBoard";
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
 export default function FarmerDetail({ farmer }) {
+  console.log(farmer)
   useEffect(() => {
     const mapBox = new mapboxgl.Map({
       container: "map",
@@ -17,7 +18,7 @@ export default function FarmerDetail({ farmer }) {
       projection: "globe",
       center: farmer?.centroid?.geometry?.coordinates,
       maxZoom: 14,
-      maxBounds: calculateBounds(farmer?.geoJson),
+      maxBounds: farmer?.bounds,
     });
 
     mapBox.on("style.load", () => {
