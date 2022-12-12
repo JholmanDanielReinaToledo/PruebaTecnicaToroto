@@ -1,11 +1,10 @@
 import Head from "next/head";
-import styles from "../../styles/Home.module.css";
 import mapboxgl from "mapbox-gl";
 import { useEffect } from "react";
 import Header from "../../src/layouts/header";
 import Footer from "../../src/layouts/footer";
 import { getFarmer } from "../../src/commons";
-import { calculateBounds } from "../../src/utils";
+import { calculateBounds, coordinatesToGeoJsonPolygon } from "../../src/utils";
 import DashBoard from "../../src/components/dashBoard";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
@@ -18,7 +17,7 @@ export default function FarmerDetail({ farmer }) {
       projection: "globe",
       center: farmer?.centroid?.geometry?.coordinates,
       maxZoom: 14,
-      maxBounds: calculateBounds(farmer?.centroid?.geometry?.coordinates),
+      maxBounds: calculateBounds(farmer?.geoJson),
     });
 
     mapBox.on("style.load", () => {
@@ -26,7 +25,7 @@ export default function FarmerDetail({ farmer }) {
     });
 
     mapBox.on("load", () => {
-      mapBox.addSource(farmer?._id, farmer.geoJson);
+      mapBox.addSource(farmer?._id, coordinatesToGeoJsonPolygon(farmer?.geoJson?.geometry?.coordinates));
       const layer = mapBox.getLayer(farmer?._id);
       if (!layer) {
         mapBox.addLayer({
@@ -73,7 +72,7 @@ export default function FarmerDetail({ farmer }) {
       <Header />
       <div className='container'>
         <p className='title2'>General information</p>
-        <div style={{ height: "45vh", width: "90vw" }}>
+        <div style={{ height: "43vh", width: "90vw" }}>
           <div className='column left'>
             <div className='card'>
               <img

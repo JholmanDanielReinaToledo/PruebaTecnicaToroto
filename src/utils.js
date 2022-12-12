@@ -1,3 +1,5 @@
+import * as turf from '@turf/turf';
+
 export const coordinatesToGeoJsonPolygon = (coordinates) => {
   return {
     type: 'geojson',
@@ -36,15 +38,8 @@ export const farmerToModal = (farmer) => {
   `;
 }
 
-export const calculateBounds = (coordinates) => {
-  return [
-    [
-      coordinates[0] - 0.04,
-      coordinates[1] - 0.04,
-    ], // Southwest coordinates
-    [
-      coordinates[0] + 0.04,
-      coordinates[1] + 0.04,
-    ], // Northeast coordinates
-  ]
+export const calculateBounds = (geojson) => {
+  const bbox = turf.bbox(geojson);
+  const bounds = [[bbox[0], bbox[1]], [bbox[2], bbox[3]]]
+  return bounds
 }
